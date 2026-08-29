@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{83e52a07-b52e-428b-a1c9-0f5c3e115ce7}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -56,5 +56,14 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="AssistanceDB" />
+    <Folder Include="AssistanceDB\Tables" />
+    <Folder Include="AssistanceDB\Programmabulity" />
+    <Folder Include="AssistanceDB\Post-Deployment" />
+    <Folder Include="AssistanceDB\Pre-Deployment" />
+    <Folder Include="AssistanceDB\Pre-Compare" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="AssistanceDB\Tables\Role.sql" />
   </ItemGroup>
 </Project>
