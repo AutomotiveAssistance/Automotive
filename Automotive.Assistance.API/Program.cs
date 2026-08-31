@@ -5,6 +5,8 @@ using System.Text;
 using Automotive.Assistance.API.Data;
 using Automotive.Assistance.API.Repositories;
 using Automotive.Assistance.API.Services;
+using Automotive.Assistance.API.Repositories.Interfaces;
+using Automotive.Assistance.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,8 +39,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IServiceProviderRepository, ServiceProviderRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IServiceProviderUserRepository, ServiceProviderUserRepository>();
+builder.Services.AddScoped<IUserRoleRepository, UserRoleRepository>();
 
+builder.Services.AddScoped<IServiceProviderUserService, ServiceProviderUserService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IRoleService, RoleService>();
+builder.Services.AddScoped<IServiceProviderService, ServiceProviderService>();
+builder.Services.AddScoped<IUserRoleService, UserRoleService>();
 
 builder.Services.AddCors(options =>
 {

@@ -65,5 +65,23 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="AssistanceDB\Tables\Role.sql" />
+    <Build Include="AssistanceDB\Tables\PartnerType.sql" />
+    <Build Include="AssistanceDB\Tables\ServiceProvider.sql" />
+    <Build Include="AssistanceDB\Tables\Service.sql" />
+    <Build Include="AssistanceDB\Tables\ServiceProviderService.sql" />
+    <Build Include="AssistanceDB\Tables\User.sql" />
+    <Build Include="AssistanceDB\Tables\UserRole.sql" />
+    <Build Include="AssistanceDB\Tables\ServiceProviderUser.sql" />
+    <Build Include="AssistanceDB\Tables\Mechanic.sql" />
+    <Build Include="AssistanceDB\Tables\Driver.sql" />
+    <Build Include="AssistanceDB\Tables\Customer.sql" />
+    <Build Include="AssistanceDB\Tables\CustomerAddress.sql" />
+    <Build Include="AssistanceDB\Tables\Vehicle.sql" />
+    <Build Include="AssistanceDB\Tables\VehicleInsurancePolicy.sql" />
+    <Build Include="AssistanceDB\Tables\WorkflowType.sql" />
+    <Build Include="AssistanceDB\Tables\ServiceProviderWorkflow.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="AssistanceDB\Post-Deployment\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

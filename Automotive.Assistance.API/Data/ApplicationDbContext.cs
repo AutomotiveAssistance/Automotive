@@ -11,6 +11,11 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Role> Roles { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Automotive.Assistance.API.Models.Entities.ServiceProvider> ServiceProviders { get; set; }
+    public DbSet<ServiceProviderUser> ServiceProviderUsers { get; set; }
+    public DbSet<UserRole> UserRoles { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
