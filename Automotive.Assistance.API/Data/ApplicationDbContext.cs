@@ -15,6 +15,8 @@ public class ApplicationDbContext : DbContext
     public DbSet<Automotive.Assistance.API.Models.Entities.ServiceProvider> ServiceProviders { get; set; }
     public DbSet<ServiceProviderUser> ServiceProviderUsers { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<CustomerAddress> customerAddresses { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
